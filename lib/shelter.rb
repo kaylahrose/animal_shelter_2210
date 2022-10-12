@@ -2,13 +2,13 @@ class Shelter
     attr_reader :name
     attr_reader :capacity
     attr_reader :pets
-    attr_reader :patrons
+    # attr_reader :patrons
 
     def initialize(name, pets)
         @name = name
         @capacity = pets
         @pets = []
-        @patrons = @pets
+    #    @patrons = @pets
     end
 
     def add_pet(pet_name)
@@ -22,5 +22,16 @@ class Shelter
         end
         p call_pets
     end
+
+    def over_capacity?
+        pets.length > capacity
+    end
+
+    def adopt
+        while pets.length > capacity == true do
+            pets.pop 
+        end
+    end
+
 
 end
