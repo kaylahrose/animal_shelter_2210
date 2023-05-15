@@ -98,5 +98,21 @@ RSpec.describe Shelter do
       expect(shelter.over_capacity?).to eq(false)
     end
   end 
+  
+    describe '#make_room' do
+    it 'increases capacity until it is no longer over capacity' do
+      
+
+      shelter = Shelter.new('Denver Animal Shelter', 3)
+      shelter.add_pet('Salem')
+      shelter.add_pet('Beethoven')
+      shelter.add_pet('Spot')
+      shelter.add_pet('Jonesy')
+      require 'pry'; binding.pry
+      shelter.make_room 
+
+      expect(shelter.over_capacity?).to eq(false)
+    end
+  end 
 end
 

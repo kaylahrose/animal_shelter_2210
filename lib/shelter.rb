@@ -33,5 +33,11 @@ class Shelter
         end
     end
 
+    def make_room
+        while pets.length > capacity == true do
+            capacity + 1
+        end
+    end
+
 
 end
